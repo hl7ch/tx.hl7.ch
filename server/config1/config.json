@@ -11,6 +11,10 @@
     }
   },
   "endpoints" : {
+    "txreg" : {
+      "path" : "/tx-reg",
+      "type" : "tx-registry"
+    },
     "cache" : {
       "path" : "/post/tx-cache",
       "type" : "folder",
