@@ -1,0 +1,30 @@
+{
+  "name" : "hl7.eu.terminology.common",
+  "version" : "0.1.0",
+  "tools-version" : 3,
+  "type" : "IG",
+  "date" : "20241028162351",
+  "license" : "CC0-1.0",
+  "canonical" : "http://hl7europe.org/fhir/terminology/common",
+  "notForPublication" : true,
+  "url" : "file://C:\\work\\ImplementationGuides\\HL7-EU-projects-terminology-package\\output",
+  "title" : "EU Common Terminologies",
+  "description" : "Implementation Guide... (built Mon, Oct 28, 2024 16:23+0100+01:00)",
+  "fhirVersions" : ["4.0.1"],
+  "dependencies" : {
+    "hl7.fhir.r4.core" : "4.0.1",
+    "hl7.terminology.r4" : "6.0.2",
+    "hl7.fhir.uv.extensions.r4" : "5.1.0"
+  },
+  "author" : "HL7 Europe",
+  "maintainers" : [
+    {
+      "name" : "HL7 Europe",
+      "url" : "http://hl7europe.org"
+    }
+  ],
+  "directories" : {
+    "lib" : "package",
+    "example" : "example"
+  }
+}
