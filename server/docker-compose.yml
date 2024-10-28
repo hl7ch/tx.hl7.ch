@@ -1,5 +1,3 @@
-version: '3.3'
-
 services:
   fhirserver1:
     image: ghcr.io/costateixeira/fhirserver:nightly
@@ -27,7 +25,7 @@ services:
       - DAEMON_MODE=-nodaemon   # Use "-daemon" to run as a daemon, "-nodaemon" to run interactively
     tty: true
     command: ["bash", "-c", "./start.sh ${DAEMON_MODE}"]
-    restart: on-failure
+    restart: unless-stopped
 
   # fhirserver2:
   #   image: ghcr.io/costateixeira/fhirserver:nightly
