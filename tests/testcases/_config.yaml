@@ -1,2 +1,2 @@
-tx_url: http://tx.hl7europe.eu/r4
+tx_url: http://localhost:80/r4
 timeout: 3000

@@ -1,4 +1,4 @@
-Feature: Test FHIR terminology server and base content
+Feature: SNOMED content
 
   Background:
     # Set the base URL for the FHIR server. Modify this value as needed.
