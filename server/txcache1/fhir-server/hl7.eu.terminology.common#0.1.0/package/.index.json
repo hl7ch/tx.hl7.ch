@@ -1,0 +1,160 @@
+{
+  "index-version" : 2,
+  "files" : [
+    {
+      "filename" : "ImplementationGuide-hl7.eu.terminology.common.json",
+      "resourceType" : "ImplementationGuide",
+      "id" : "hl7.eu.terminology.common",
+      "url" : "http://hl7europe.org/fhir/terminology/common/ImplementationGuide/hl7.eu.terminology.common",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "CodeSystem-lab-localCs-eu-lab.json",
+      "resourceType" : "CodeSystem",
+      "id" : "lab-localCs-eu-lab",
+      "url" : "http://example.org/lab-codes",
+      "version" : "0.1.0",
+      "content" : "complete"
+    },
+    {
+      "filename" : "ValueSet-eHDSILabStudyType.json",
+      "resourceType" : "ValueSet",
+      "id" : "eHDSILabStudyType",
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSILabStudyType",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "ValueSet-lab-certifiedRefMaterial-eu-lab.json",
+      "resourceType" : "ValueSet",
+      "id" : "lab-certifiedRefMaterial-eu-lab",
+      "url" : "http://hl7europe.org/fhir/terminology/common/ValueSet/lab-certifiedRefMaterial-eu-lab",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "ValueSet-lab-laterality-eu-lab.json",
+      "resourceType" : "ValueSet",
+      "id" : "lab-laterality-eu-lab",
+      "url" : "http://hl7europe.org/fhir/terminology/common/ValueSet/lab-laterality-eu-lab",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "ValueSet-lab-obsCode-eu-lab.json",
+      "resourceType" : "ValueSet",
+      "id" : "lab-obsCode-eu-lab",
+      "url" : "http://hl7europe.org/fhir/terminology/common/ValueSet/lab-obsCode-eu-lab",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "ValueSet-lab-obsCode-loinc-eu-lab.json",
+      "resourceType" : "ValueSet",
+      "id" : "lab-obsCode-loinc-eu-lab",
+      "url" : "http://hl7europe.org/fhir/terminology/common/ValueSet/lab-obsCode-loinc-eu-lab",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "ValueSet-lab-obsCode-npu-eu-lab.json",
+      "resourceType" : "ValueSet",
+      "id" : "lab-obsCode-npu-eu-lab",
+      "url" : "http://hl7europe.org/fhir/terminology/common/ValueSet/lab-obsCode-npu-eu-lab",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "ValueSet-lab-orderCodes-eu-lab.json",
+      "resourceType" : "ValueSet",
+      "id" : "lab-orderCodes-eu-lab",
+      "url" : "http://hl7europe.org/fhir/terminology/common/ValueSet/lab-orderCodes-eu-lab",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "ValueSet-lab-reportType-eu-lab.json",
+      "resourceType" : "ValueSet",
+      "id" : "lab-reportType-eu-lab",
+      "url" : "http://hl7europe.org/fhir/terminology/common/ValueSet/lab-reportType-eu-lab",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "ValueSet-lab-siteQualifier-eu-lab.json",
+      "resourceType" : "ValueSet",
+      "id" : "lab-siteQualifier-eu-lab",
+      "url" : "http://hl7europe.org/fhir/terminology/common/ValueSet/lab-siteQualifier-eu-lab",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "ValueSet-lab-specialty-eu-lab.json",
+      "resourceType" : "ValueSet",
+      "id" : "lab-specialty-eu-lab",
+      "url" : "http://hl7europe.org/fhir/terminology/common/ValueSet/lab-specialty-eu-lab",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "ValueSet-lab-speciesType-eu-vs.json",
+      "resourceType" : "ValueSet",
+      "id" : "lab-speciesType-eu-vs",
+      "url" : "http://hl7europe.org/fhir/terminology/common/ValueSet/lab-speciesType-eu-vs",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "ValueSet-lab-specimenAdditive-eu-lab.json",
+      "resourceType" : "ValueSet",
+      "id" : "lab-specimenAdditive-eu-lab",
+      "url" : "http://hl7europe.org/fhir/terminology/common/ValueSet/lab-specimenAdditive-eu-lab",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "ValueSet-lab-specimenContainer-eu-lab.json",
+      "resourceType" : "ValueSet",
+      "id" : "lab-specimenContainer-eu-lab",
+      "url" : "http://hl7europe.org/fhir/terminology/common/ValueSet/lab-specimenContainer-eu-lab",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "ValueSet-lab-specimenType-eu-lab.json",
+      "resourceType" : "ValueSet",
+      "id" : "lab-specimenType-eu-lab",
+      "url" : "http://hl7europe.org/fhir/terminology/common/ValueSet/lab-specimenType-eu-lab",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "ValueSet-lab-studyType-eu-lab.json",
+      "resourceType" : "ValueSet",
+      "id" : "lab-studyType-eu-lab",
+      "url" : "http://hl7europe.org/fhir/terminology/common/ValueSet/lab-studyType-eu-lab",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "ValueSet-lab-technique-eu-lab.json",
+      "resourceType" : "ValueSet",
+      "id" : "lab-technique-eu-lab",
+      "url" : "http://hl7europe.org/fhir/terminology/common/ValueSet/lab-technique-eu-lab",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "ValueSet-results-blood-group-uv-ips.json",
+      "resourceType" : "ValueSet",
+      "id" : "results-blood-group-uv-ips",
+      "url" : "http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-uv-ips",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "ValueSet-results-coded-values-laboratory-uv-ips.json",
+      "resourceType" : "ValueSet",
+      "id" : "results-coded-values-laboratory-uv-ips",
+      "url" : "http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-uv-ips",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "ValueSet-results-microorganism-uv-ips.json",
+      "resourceType" : "ValueSet",
+      "id" : "results-microorganism-uv-ips",
+      "url" : "http://hl7.org/fhir/uv/ips/ValueSet/results-microorganism-uv-ips",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "ValueSet-results-presence-absence-uv-ips.json",
+      "resourceType" : "ValueSet",
+      "id" : "results-presence-absence-uv-ips",
+      "url" : "http://hl7.org/fhir/uv/ips/ValueSet/results-presence-absence-uv-ips",
+      "version" : "0.1.0"
+    }
+  ]
+}

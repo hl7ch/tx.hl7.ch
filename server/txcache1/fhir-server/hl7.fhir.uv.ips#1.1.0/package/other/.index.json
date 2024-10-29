@@ -1,0 +1,17 @@
+{
+  "index-version": 1,
+  "files": [
+    {
+      "filename": "validation-oo.json",
+      "resourceType": "Bundle",
+      "type": "collection"
+    },
+    {
+      "filename": "ig-r4.json",
+      "resourceType": "ImplementationGuide",
+      "id": "hl7.fhir.uv.ips",
+      "url": "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips",
+      "version": "1.1.0"
+    }
+  ]
+}

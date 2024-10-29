@@ -1,0 +1,7 @@
+{
+    "name": "HL7 Europe Terminology Service tests (local)",
+    "type": "Custom Executor",
+    "url": "http://example.com",
+    "buildOrder": "1",
+    "reportName": "HL7 Europe Terminology Service tests (local)"
+}
