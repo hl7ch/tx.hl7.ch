@@ -22,6 +22,7 @@
           "fhir.tx.support.r4",
           "ihe.formatcode.fhir",
           "hl7.eu.terminology.common",
+          "hl7.fhir.uv.ips#1.1.0",
           "fhir.dicom"
         ],
         "r3" : [
