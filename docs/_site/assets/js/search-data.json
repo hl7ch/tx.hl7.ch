@@ -1,0 +1,191 @@
+{"0": {
+    "doc": "Adding content",
+    "title": "Adding or updating cache files (SNOMED, LOINC, others)",
+    "content": ". | Prepare the cache file | Upload the cache file to the txcache/fhirserver folder on the server | List the cache file in the local config.json, in the content section, in uv (or in the code for a specific country if needed). Example: | . \"content\" : { \"uv\" : { \"files\" : { \"loinc-2.78.db\" : \"loinc\", \"unii_20240622.db\" : \"unii\", \"sct_intl_20240801.cache\" : \"snomed!\", \"ucum-essence-2.2.xml\" : \"ucum\", \"omop_20230531_a.db\" : \"omop\" }, . | Ensure there is no conflicting entry in config.json | The ! in snomed! means that the corresponding entry is the default SNOMED edition | . ",
+    "url": "/content/adding-content.html#adding-or-updating-cache-files-snomed-loinc-others",
+    
+    "relUrl": "/content/adding-content.html#adding-or-updating-cache-files-snomed-loinc-others"
+  },"1": {
+    "doc": "Adding content",
+    "title": "Adding or updating FHIR packages",
+    "content": "Adding FHIR packages consists of listing them in the config.json and, if needed, copying the package to the server directly. | If needed, stop the server | List the package in the respective endpoint on the server. | Since r4 is the default endpoint, these packages are listed in content.packages.r4 (see below). | The package are listed as &lt;packageid&gt;#&lt;version&gt; for a specific version, or &lt;packageid&gt; for the current one, where &lt;packageid&gt; is the package id, for example hl7.terminology.r4 and &lt;version&gt; is the semver version of the package, e.g. 5.5.0. The package name in this example is therefore hl7.terminology.r4 (for current) or hl7.terminology.r4#5.5.0 (for a specific version). | . | . Example: . \"packages\" : { \"r5\" : [ ... ], \"r4\" : [ \"hl7.terminology.r4\", \"fhir.tx.support.r4\", \"ihe.formatcode.fhir\", \"hl7.eu.terminology.common\", \"hl7.fhir.uv.ips#1.1.0\", \"fhir.dicom\" ], . | If the package is in the FHIR registry, this is sufficient - the package will be downloaded next time the server starts. If the package is not in the FHIR registry, add it manually to the server (see below). | Restart the server and check there are no errors . | . Manually adding a local package: . Note: (this is a recent feature and may be subject to change) . 3.1. Create a folder named &lt;packageid&gt;#&lt;version&gt; in the txcache/fhirserver folder, where &lt;packageid&gt; is the package id, for example hl7.terminology.r4 and &lt;version&gt; is the semver version of the package, e.g. 5.5.0. The folder name in this example is therefore hl7.terminology.r4#5.5.0. 3.2. Extract the folder package FHIR package (package.tgz) inside that folder so that the FHIR content is in the folder hl7.terminology.r4#5.5.0/package. When done adding the content, it is recommended to create a test case. ",
+    "url": "/content/adding-content.html#adding-or-updating-fhir-packages",
+    
+    "relUrl": "/content/adding-content.html#adding-or-updating-fhir-packages"
+  },"2": {
+    "doc": "Adding content",
+    "title": "Adding content",
+    "content": "Adding content to the server consists of: . | Stopping the server | Adding the content (files or packages) to config.json | For local packages or cache files, adding the package content to the txcache folder | Restarting the server | Running the tests (after updating the tests) | . The terminology server does not support POSTs or PUTs of terminology content . ",
+    "url": "/content/adding-content.html",
+    
+    "relUrl": "/content/adding-content.html"
+  },"3": {
+    "doc": "Creating content",
+    "title": "SNOMED",
+    "content": "Use the FHIR Console to create a SNOMED cache file . ",
+    "url": "/content/creating-content.html#snomed",
+    
+    "relUrl": "/content/creating-content.html#snomed"
+  },"4": {
+    "doc": "Creating content",
+    "title": "LOINC",
+    "content": "Use the FHIR Console to create a LOINC Cache file . ",
+    "url": "/content/creating-content.html#loinc",
+    
+    "relUrl": "/content/creating-content.html#loinc"
+  },"5": {
+    "doc": "Creating content",
+    "title": "Other large terminologies",
+    "content": "Check Zulip . ",
+    "url": "/content/creating-content.html#other-large-terminologies",
+    
+    "relUrl": "/content/creating-content.html#other-large-terminologies"
+  },"6": {
+    "doc": "Creating content",
+    "title": "FHIR content",
+    "content": "This is expectably the most common type of content to be uploaded. To do so, the FHIR artifacts (ValueSets, CodeSystems) need to be in a FHIR Package. | Prepare the package and ensure it has no issues | . ",
+    "url": "/content/creating-content.html#fhir-content",
+    
+    "relUrl": "/content/creating-content.html#fhir-content"
+  },"7": {
+    "doc": "Creating content",
+    "title": "Creating content",
+    "content": " ",
+    "url": "/content/creating-content.html",
+    
+    "relUrl": "/content/creating-content.html"
+  },"8": {
+    "doc": "Server setup",
+    "title": "Server setup",
+    "content": "The HL7 EU Terminology server, hosted at http://tx.hl7europe.eu, is an instance of Health Intersections’s FHIR server, similar to tx.fhir.org used in FHIR tooling. The server is used for authoring and validating FHIR specifications. Please note: . The FHIR Tooling eco-system exists to support design time and publication usage. It is not intended to support production use, and should not be used in operational systems. This documentation describes the server setup. ",
+    "url": "/server/",
+    
+    "relUrl": "/server/"
+  },"9": {
+    "doc": "Home",
+    "title": "Home",
+    "content": "The HL7 EU Terminology server, hosted at http://tx.hl7europe.eu, is used for authoring and validating FHIR specifications. Please note: . The FHIR Tooling eco-system exists to support design time and publication usage. It is not intended to support production use, and should not be used in operational systems. This documentation describes the server setup and tooling . There is a roadmap for terminology content and an issue page where terminology content changes can be requested. This documentation is hosted in the github repository, in the docs folder. This document describes: . | Server Setup | Content | Usage | Testing | . ",
+    "url": "/",
+    
+    "relUrl": "/"
+  },"10": {
+    "doc": "Content",
+    "title": "Content",
+    "content": "Content release backlog: . | Release Plan | . ",
+    "url": "/content/",
+    
+    "relUrl": "/content/"
+  },"11": {
+    "doc": "Setup",
+    "title": "SSH into the VM console",
+    "content": ". | The server files are all in the txserver folder. | Enter the folder: cd txserver | . | . ",
+    "url": "/server/setup-vm.html#ssh-into-the-vm-console",
+    
+    "relUrl": "/server/setup-vm.html#ssh-into-the-vm-console"
+  },"12": {
+    "doc": "Setup",
+    "title": "Adjust disk size (if needed)",
+    "content": "On google cloud this can be done: . | in the Virtual Disk, define a new size - 40 GB are normally sufficient for the terminology server | in the console, update the disk size and install needed tools: | . sudo apt update sudo apt install cloud-guest-utils sudo apt-get install parallel lsblk sudo growpart /dev/sda 1 sudo resize2fs /dev/sda1 df -h . | Restart the machine if needed | . ",
+    "url": "/server/setup-vm.html#adjust-disk-size-if-needed",
+    
+    "relUrl": "/server/setup-vm.html#adjust-disk-size-if-needed"
+  },"13": {
+    "doc": "Setup",
+    "title": "Check the configuration",
+    "content": "The configuration is contained in the docker image. The main aspects of configuration are the configuration files and the cached content, which are mapped volumes, respectively: . | folder | Description and content | Host folder | Docker container folder | . | config | config.ini (server parameters) and config.json (content parameters) | ./config1 | /root/fhirserver/config | . | txcache | cached config, packages and cache files | ./txcache1 | /var/cache/txcache | . ",
+    "url": "/server/setup-vm.html#check-the-configuration",
+    
+    "relUrl": "/server/setup-vm.html#check-the-configuration"
+  },"14": {
+    "doc": "Setup",
+    "title": "Setup the server",
+    "content": "Download the cache files - the server can automatically download FHIR packages from the package registry, but not the prepopulated cache files, which need to be provided. See the page Creating content for how to create these cache files. There is a download script that automatically downloads the cache fles. Run it with sudo ./downloadcachefiles.sh This script depends on parallel package which is installed in the script above. Setup local SSH/SCP access . See for example https://winscp.net/eng/docs/guide_google_compute_engine. Note: User your username as it is in the console (use whoami), not your Google username . ",
+    "url": "/server/setup-vm.html#setup-the-server",
+    
+    "relUrl": "/server/setup-vm.html#setup-the-server"
+  },"15": {
+    "doc": "Setup",
+    "title": "Setup",
+    "content": " ",
+    "url": "/server/setup-vm.html",
+    
+    "relUrl": "/server/setup-vm.html"
+  },"16": {
+    "doc": "Starting and Stopping",
+    "title": "Start",
+    "content": "The server configuration is contained in docker-compose.yml (source). To run it, the preferred way is to run sudo docker-compose up --pull to pull the container image and start the server. Alternatively, pull the images with sudo docker compose pull and then start with sudo docker compose up. The start cycle of the server is: When the binary is launched, the server looks for the defined configuration location where the config.ini file is located. It then loads the configuration from the location indicated in that config.ini file. This configuration includes server parameters, ports, endpoitns, etc, as well as the content that should be loaded to the server. After loading the configuration and checking if all required content is present, it loading the packages and cache. After this, it starts the web server. After the web server is up, the server still runs a background loading process to fetch and index the content. Some time after launching the executable (configured in the docker-compose.yml file) the health check starts periodically checking if the server is responding. During the startup, some messages will appear - these are ok to ignore: . tx-fhir-eu-1 | The XKEYBOARD keymap compiler (xkbcomp) reports: ... tx-fhir-eu-1 | &gt; Warning: Could not resolve keysym XF86SidevuSonar tx-fhir-eu-1 | &gt; Warning: Could not resolve keysym XF86NavInfo tx-fhir-eu-1 | Errors from xkbcomp are not fatal to the X server . The server starts by checking the [[Configuration]] and starts loading the packages. This is the critical part - if there are any issues with the configuration, they will show up here. A normal configuration would show: . tx-fhir-eu-1 | 05:34:40 00:00:00 3467b 0% FHIR Server 3.4.27-SNAPSHOT Linux/FreePascal, Development Build tx-fhir-eu-1 | 05:34:40 00:00:00 3518b 0% Running on \"ce7850bd458a\": \"Ubuntu\" v\"24.04.1 LTS (Noble Numbat)\". 47.0 GB/ 0 bytes memory tx-fhir-eu-1 | 05:34:40 00:00:00 3588b 0% Logging to /tmp/fhirserver.log. No Debugger. tx-fhir-eu-1 | 05:34:40 00:00:00 3671b 0% /root/fhirserver/fhirserver -cmd exec -cfg /root/fhirserver/config/config.ini (dir=/root/fhirserver) tx-fhir-eu-1 | 05:34:40 00:00:00 3671b 0% Command Line Parameters: see https://github.com/HealthIntersections/fhirserver/wiki/Command-line-Parameters-for-the-server tx-fhir-eu-1 | 05:34:40 00:00:00 3403b 0% Loading Dependencies tx-fhir-eu-1 | 05:34:40 00:00:00 325kb 0% TimeZone: Etc/UTC @ UTC tx-fhir-eu-1 | 05:34:40 00:00:00 325kb 0% Loaded tx-fhir-eu-1 | 05:34:40 00:00:00 325kb 0% Local config: /root/fhirserver/config/config.ini (exists = True) tx-fhir-eu-1 | 05:34:40 00:00:00 327kb 0% Read Zero Config from file:/root/fhirserver/config/config.json tx-fhir-eu-1 | 05:34:40 00:00:00 358kb 0% Local Config in /var/cache/txcache/fhir-server/ tx-fhir-eu-1 | 05:34:40 00:00:00 329kb 0% Actual config: /var/cache/txcache/fhir-server/fhir-server-config.cfg tx-fhir-eu-1 | 05:34:40 00:00:00 431kb 0% Using Configuration file /var/cache/txcache/fhir-server/fhir-server-config.cfg tx-fhir-eu-1 | 05:34:40 00:00:00 434kb 0% Start Telnet Server on Port 44123 tx-fhir-eu-1 | 05:34:40 00:00:00 439kb 0% Thread start Telnet Server 00007FF437A966C0 tx-fhir-eu-1 | 05:34:40 00:00:00 460kb 0% Run Number 8 tx-fhir-eu-1 | 05:34:40 00:00:00 460kb 0% Load Terminologies tx-fhir-eu-1 | 05:34:41 00:00:00 5Mb 0% load ucum-essence-2.2 from /var/cache/txcache/fhir-server/ucum-essence-2.2.xml . This line . tx-fhir-eu-1 | 05:34:40 00:00:00 325kb 0% Local config: /root/fhirserver/config/config.ini (exists = True) . confirms that the local Configuration was found and is being used. The line . tx-fhir-eu-1 | 05:34:41 00:00:00 5Mb 0% load ucum-essence-2.2 from /var/cache/txcache/fhir-server/ucum-essence-2.2.xml . confirms the server is loading the files . It takes several minutes (3 to 10, possibly more) for the server to download and open all the packages and process the cache files. At the end the log will say . tx-fhir-eu-1 | 05:36:54 00:02:14 6Gb 0% Start Web Server: tx-fhir-eu-1 | 05:36:54 00:02:14 6Gb 0% http: listen on 80, Limited to 50 connections ... tx-fhir-eu-1 | 05:36:55 00:02:15 6Gb 0% started (135secs) . At this moment the server is available on http://tx.hl7europe.eu : . ",
+    "url": "/server/start-stop.html#start",
+    
+    "relUrl": "/server/start-stop.html#start"
+  },"17": {
+    "doc": "Starting and Stopping",
+    "title": "Background loading",
+    "content": "During the background load, fetching a resource directly produces the expected results: For example when fetching http://tx.hl7europe.eu/r4/ValueSet/results-coded-values-laboratory-uv-ips . However, a search like http://tx.hl7europe.eu/r4/ValueSet?url=http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-uv-ips will return an error: . ",
+    "url": "/server/start-stop.html#background-loading",
+    
+    "relUrl": "/server/start-stop.html#background-loading"
+  },"18": {
+    "doc": "Starting and Stopping",
+    "title": "Updating the server",
+    "content": "To update the server binaries, simply update the docker image docker compose pull . ",
+    "url": "/server/start-stop.html#updating-the-server",
+    
+    "relUrl": "/server/start-stop.html#updating-the-server"
+  },"19": {
+    "doc": "Starting and Stopping",
+    "title": "Health check",
+    "content": "The server has a health check that checks every 2 minutes if the server is alive and responds to a request. That request is currently http://localhost:80/r4/metadata healthcheck: test: [“CMD”, “curl”, “-f”, “http://localhost:80/r4/metadata”] interval: 5m timeout: 30s retries: 5 start_period: 600s . If the server doesn’t respond, it will be automatically restarted. ",
+    "url": "/server/start-stop.html#health-check",
+    
+    "relUrl": "/server/start-stop.html#health-check"
+  },"20": {
+    "doc": "Starting and Stopping",
+    "title": "Starting and Stopping",
+    "content": " ",
+    "url": "/server/start-stop.html",
+    
+    "relUrl": "/server/start-stop.html"
+  },"21": {
+    "doc": "Testing",
+    "title": "Testing",
+    "content": "The server repository includes some test cases and a contained test engine and reporting engine for running tests offline and asynchronously. When adding terminology content, the corresponding test cases should be added, so that the status of the server and of the content are always known. ",
+    "url": "/testing.html",
+    
+    "relUrl": "/testing.html"
+  },"22": {
+    "doc": "Updating the server",
+    "title": "Updating the server",
+    "content": "Updating the server can mean updating the server binary due to continuous improvement, or updating the docker image and additional components. To do this, simply stop the server, check for a new server docker image, update the docker compose file, and restart the server . ",
+    "url": "/server/updates.html",
+    
+    "relUrl": "/server/updates.html"
+  },"23": {
+    "doc": "Usage",
+    "title": "From the browser",
+    "content": "After the server is started, it will be available in http://tx.hl7europe.eu. Users can use the browser to run operations, search for ValueSets and CodeSystems, etc. NOTE: most browsers will append https:// to a url, so to open the server on a browser, make sure you type http://tx.hl7europe.eu and not just tx.hl7europe.eu. An https connection is coming later. ",
+    "url": "/using-server.html#from-the-browser",
+    
+    "relUrl": "/using-server.html#from-the-browser"
+  },"24": {
+    "doc": "Usage",
+    "title": "ImplementationGuide publication",
+    "content": "To use the server in IG publication, simply add -tx http://http://tx.hl7europe.eu/r4 to the generation commands or scripts. For example ./_genonce.sh -tx http://tx.hl7europe.eu/r4 . or ./_genonce.bat -tx http://tx.hl7europe.eu/r4 . ",
+    "url": "/using-server.html#implementationguide-publication",
+    
+    "relUrl": "/using-server.html#implementationguide-publication"
+  },"25": {
+    "doc": "Usage",
+    "title": "Validating resources",
+    "content": "To use the FHIR command line validator with the HL7 EU terminology server for resource validation, simply add -tx http://tx.hl7europe.eu/r4 to the command line, as described here. ",
+    "url": "/using-server.html#validating-resources",
+    
+    "relUrl": "/using-server.html#validating-resources"
+  },"26": {
+    "doc": "Usage",
+    "title": "Usage",
+    "content": " ",
+    "url": "/using-server.html",
+    
+    "relUrl": "/using-server.html"
+  }
+}
