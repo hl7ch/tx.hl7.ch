@@ -13,4 +13,4 @@ plugins:
 color_scheme: wider
 
 # Set a path/url to a logo that will be displayed instead of the title
-logo: "{{ site.baseurl }}/assets/images/hl7-eu-logo.jpg"
+logo: "/assets/images/hl7-eu-logo.jpg"
