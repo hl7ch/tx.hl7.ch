@@ -17,7 +17,7 @@ It then loads the configuration from the location indicated in that config.ini f
 After loading the configuration and checking if all required content is present, it loading the packages and cache. After this, it starts the web server.  
 After the web server is up, the server still runs a [background loading process](#background-loading) to fetch and index the content. Some time after launching the executable (configured in the `docker-compose.yml` file) the health check starts periodically checking if the server is responding.
 <br clear ="ALL"/>
-<img src="/assets/images/timeline.png" alt="Timeline" width="800">
+<img src="{{ site.baseurl }}/assets/images/timeline.png" alt="Timeline" width="800">
 
 
 
@@ -84,7 +84,7 @@ tx-fhir-eu-1  | 05:36:55 00:02:15 6Gb 0% started (135secs)
 
 At this moment the server is available on http://tx.hl7europe.eu :
 <br clear ="ALL"/>
-<img src="/assets/images/server-up.png" alt="Server Up" width="800">
+<img src="{{ site.baseurl }}/assets/images/server-up.png" alt="Server Up" width="800">
 
 
 ## Background loading
@@ -93,14 +93,14 @@ During the background load, fetching a resource directly produces the expected r
 For example when fetching `http://tx.hl7europe.eu/r4/ValueSet/results-coded-values-laboratory-uv-ips`
 
 <br clear ="ALL"/>
-<img src="/assets/images/server-get.png" alt="Server GET" width="800">
+<img src="{{ site.baseurl }}/assets/images/server-get.png" alt="Server GET" width="800">
 
 
 However, a search like
 `http://tx.hl7europe.eu/r4/ValueSet?url=http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-uv-ips` will return an error:
 
 <br clear ="ALL"/>
-<img src="/assets/images/server-not-running.png" alt="Server not running" width="800">
+<img src="{{ site.baseurl }}/assets/images/server-not-running.png" alt="Server not running" width="800">
 
 
 
