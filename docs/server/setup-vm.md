@@ -8,7 +8,7 @@ parent: Server setup
 ## SSH into the VM console
 
 <br clear ="ALL"/>
-<img src="/assets/images/console.png" alt="Console" width="800">
+<img src="/assets/images/console.png" alt="Console" width="800"/>
 
 
 2. The server files are all in the `txserver` folder. 
