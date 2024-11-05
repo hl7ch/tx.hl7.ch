@@ -113,16 +113,7 @@ To update the server binaries, simply update the docker image
 
 ## Health check
 
-The server has a health check that checks every 2 minutes if the server is alive and responds to a request. That request is currently `http://localhost:80/r4/metadata`
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:80/r4/metadata"]
-      interval: 5m
-      timeout: 30s
-      retries: 5
-      start_period: 600s
+The server has a health check that checks every 2 minutes with 5 retries if the server is alive and responds to a request. That request is currently on `http://localhost:80/r4/metadata`. The request is only starting after 10 minutes, to give the server time to startup.
 
-If the server doesn't respond, it will be automatically restarted.
-
-
-
+After 10 minutes of consecutive failure, the server is automatically restarted.
 
