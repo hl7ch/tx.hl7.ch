@@ -4,10 +4,10 @@ services:
     volumes:
       - ./txcache1:/var/cache/txcache
       - ./config1:/root/fhirserver/config
-    container_name: tx-fhir-eu-1
+    container_name: tx-fhir-ch-1
     ports:
       - "44123:44123" # Map port 23456 from the host to port 23456 in the container
-      - "80:80" # Map port 80 from the host to port 80 in the container
+      - "8080:80" # Map port 80 from the host to port 80 in the container
       
     # deploy:
     #   resources:
