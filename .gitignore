@@ -1,2 +1,6 @@
 
 /tests/target
+/server/txcache1/fhir-server/ch.*
+/server/txcache1/fhir-server/loinc*
+/server/txcache1/fhir-server/sct*
+
