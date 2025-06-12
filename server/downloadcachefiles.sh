@@ -51,6 +51,9 @@ download_package() {
     fi
 }
 
+echo "Download process completed."
+exit 0
+
 # Export the function to be used in parallel
 export -f download_package
 

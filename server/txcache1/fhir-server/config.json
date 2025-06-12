@@ -9,7 +9,6 @@
       },
       "packages" : {
         "r4" : [
-          "ch.fhir.ig.ch-term#3.1.0",
           "ch.fhir.ig.ch-term#3.2.0"
         ]
       }
