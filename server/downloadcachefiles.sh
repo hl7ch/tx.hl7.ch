@@ -52,33 +52,3 @@ download_package() {
 }
 
 echo "Download process completed."
-exit 0
-
-# Export the function to be used in parallel
-export -f download_package
-
-CHTERM=(
-#    "https://www.fhir.ch/ig/ch-term/3.0.0/package.tgz"
-    "https://www.fhir.ch/ig/ch-term/3.2.0/package.tgz"
-    "https://www.fhir.ch/ig/ch-term/3.1.0/package.tgz"
-)
-
-URLS=`printf "%s\n" "${CHTERM[@]}" | grep -v '^#'`
-
-for url in $URLS ; do
-    echo "$url"
-    part1=`echo $url | cut -d"/" -f5`
-    part2=`echo $url | cut -d"/" -f6`
-    echo "Part1: $part1, Part2: $part2"
-    filename="ch.fhir.ig.$part1#$part2.tgz"
-    dirname="ch.fhir.ig.$part1#$part2"
-    echo "$filename"
-    download_package $url $filename
-    mkdir -p $DOWNLOAD_DIR/$dirname
-    tar -xz -C $DOWNLOAD_DIR/$dirname -f $DOWNLOAD_DIR/$filename 
-    rm -rf $DOWNLOAD_DIR/$filename
-done
-
-
-
-echo "Download process completed."
