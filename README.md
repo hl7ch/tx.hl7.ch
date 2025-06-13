@@ -43,3 +43,29 @@ docker compose start
 ```
 docker compose logs -f
 ```
+
+
+## Update
+The terminologie server docker image (ghcr.io/costateixeira/fhirserver:nightly) is nightly built with the newest server versions.
+This means the running image has to be updated. This can be done by the following steps.
+
+### Stop Container
+```
+docker compose stop
+```
+
+### Update image
+```
+docker compose pull
+```
+
+### Rebuild
+```
+docker compose up
+```
+after successfull start ctrl+x to stop
+
+### Start
+```
+docker compose start
+```
