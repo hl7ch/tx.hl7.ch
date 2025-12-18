@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directory where files will be downloaded
-DOWNLOAD_DIR="./txcache1/fhir-server"
+DOWNLOAD_DIR="./txcache/fhir-server"
 
 # Base URL for the downloads
 BASE_URL="https://igs.raly.ch/tx.fhir.ch/cache-files"
@@ -9,8 +9,8 @@ BASE_URL="https://igs.raly.ch/tx.fhir.ch/cache-files"
 # List of files to download
 FILES=(
     "loinc-2.80.db"
-    "sct_ch_20250607.cache"
-    "sct_intl_20250601.cache"
+    "sct_ch_20251207.cache"
+    "sct_intl_20251201.cache"
 )
 
 # Create the download directory if it doesn't exist
@@ -52,3 +52,4 @@ download_package() {
 }
 
 echo "Download process completed."
+

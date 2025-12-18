@@ -5,17 +5,17 @@
     "uv" : {
       "files" : {
         "loinc-2.80.db" : "loinc",
-        "sct_intl_20250601.cache" : "snomed!"
+        "sct_intl_20251201.cache" : "snomed!"
       },
       "packages" : {
         "r4" : [
-          "ch.fhir.ig.ch-term#3.2.0"
+          "ch.fhir.ig.ch-term#3.3.0"
         ]
       }
     },
     "ch" : {
       "files" : {
-        "sct_ch_20250607.cache" : "snomed"
+        "sct_ch_20251207.cache" : "snomed"
       }
     }
   },
