@@ -50,3 +50,4 @@ export DOWNLOAD_DIR BASE_URL
 printf "%s\n" "${FILES[@]}" | grep -v '^#' | parallel -j 4 download_file
 
 echo "Download process completed."
+
