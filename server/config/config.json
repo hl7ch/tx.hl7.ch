@@ -4,13 +4,13 @@
   "content" : {
     "uv" : {
       "files" : {
-        "loinc-2.80.db" : "loinc",
+        "loinc-2.81-b.db" : "loinc",
         "sct_intl_20251201.cache" : "snomed!"
       },
       "packages" : {
         "r4" : [
           "ch.fhir.ig.ch-term#3.3.0"
-        ]
+	]
       }
     },
     "ch" : {

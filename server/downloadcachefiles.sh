@@ -8,7 +8,7 @@ BASE_URL="https://igs.raly.ch/tx.fhir.ch/cache-files"
 
 # List of files to download
 FILES=(
-    "loinc-2.80.db"
+    "loinc-2.81-b.db"
     "sct_ch_20251207.cache"
     "sct_intl_20251201.cache"
 )
