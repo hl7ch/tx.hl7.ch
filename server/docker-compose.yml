@@ -6,6 +6,7 @@ services:
     volumes:
       - ./txcache:/var/cache/txcache
       - ./config:/root/fhirserver/config
+      - ./web_files:/root/fhirserver/web_files
     container_name: tx-fhir
     ports:
       - "8888:80" # Map port 80 from the host to port 80 in the container
